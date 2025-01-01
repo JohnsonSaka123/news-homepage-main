@@ -1,0 +1,162 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 2em;
+  grid-template-areas: 
+  "header header header"
+  "main main headline-right"
+  "main main headline-right"
+  "footer footer foooter";
+}
+li{
+  list-style-type: none;
+
+}
+a{
+  text-decoration: none;
+}
+header{
+  width: 100%;
+  max-width: 1440px;
+  background-color: burlywood;
+  padding-top: 2em;
+  grid-area: header;
+  padding-right: 1em;
+}
+main{
+  grid-area: main;
+  grid-row: 2/4;
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.hero-section{
+  width: inherit;
+  height: auto;
+  flex: 1;
+}
+.sub-section{
+  flex: 1;
+  display: flex;
+  height: inherit;
+}
+.headliner{
+  flex: 1;
+}
+.headliner h1{
+  width: 200px;
+}
+.details{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.details p{
+  width: 380px;
+  
+}
+.details button{
+  width: 200px;
+}
+.hero-section img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.headline-right{
+  grid-area: headline-right;
+  grid-column: 3/4;
+  grid-row: 2/4;
+  height: inherit;
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(233, 8%, 79%);
+  padding: 1em 0.5em 1em 0.5em;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 0.3em;
+  margin-right: 1em;
+}
+.headline-1 h4{
+  margin-bottom: 1em;
+}
+.headline-1 h4:not(:first-child){
+  margin-top:1em;
+}
+.headline-1:not(:last-child){
+  border-bottom: 1px solid hsl(233, 8%, 79%);
+}
+
+ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li:first-child{
+  margin-right: auto;
+  margin-inline-start: 0;
+  font-size: 2em;
+}
+ul li a{
+  margin-inline-start: 1em;
+}
+footer{
+  grid-area: footer;
+  grid-row: 4/5;
+  grid-column: 1/4;
+  display: flex;
+  gap: 2em;
+}
+.info-1{
+  flex: 1;
+}
+.info-2 {
+  flex: 1;
+}
+.info-3 {
+  flex: 1;
+}
+.info{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.img-section{
+  height: 8em;
+  width: 8em;
+  
+}
+.sub-details{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.img-section img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sub-detials h3{
+  flex: 1;
+}
+.sub-details .title{
+  flex: 1;
+}
+.sub-detials .description{
+  flex: 1;
+}
+main, footer{
+  margin-left: 1em;
+}
+
+
+
+
